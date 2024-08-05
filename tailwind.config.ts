@@ -16,7 +16,7 @@ const config: Config = {
       fontFamily: {
         Rotobo: ["Roboto", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],
-        OpenSans: ["Open sans", "sans-serif"],
+        OpenSans: ["Open-sans", "sans-serif"],
         Raleway: ["Raleway", "sans-serif"],
       },
       colors: {

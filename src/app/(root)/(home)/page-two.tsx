@@ -10,6 +10,7 @@ const Home = () => {
         <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center">
           {ImagePosts.map((post) => (
             <ImageCard
+              key={post.brandName}
               brandLogo={post.brandLogo}
               brandName={post.brandName}
               lastSaveDate={post.lastSaveDate}
@@ -22,6 +23,7 @@ const Home = () => {
         <div className="grid grid-cols-3 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center mt-14">
           {VideoPosts.map((post) => (
             <VideoCard
+              key={post.brandName}
               brandLogo={post.brandLogo}
               brandName={post.brandName}
               lastSaveDate={post.lastSaveDate}
