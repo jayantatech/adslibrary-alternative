@@ -9,6 +9,10 @@ import ProductTwo from "./product-boat.jpg";
 import BoatLogo from "./boat-logo.jpg";
 import Logo from "./logoipsum-297.svg";
 
+//home page images
+
+import HeroDashboardIMage from "./home/home_top_image.webp";
+
 export {
   FacebookLogo,
   InstagramLogo,
@@ -20,4 +24,5 @@ export {
   ProductTwo,
   BoatLogo,
   Logo,
+  HeroDashboardIMage,
 };
