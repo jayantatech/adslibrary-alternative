@@ -1,6 +1,6 @@
 import FacebookLogo from "./Facebook-Logo.png";
 import InstagramLogo from "./Instagram-Logo.png";
-import PosterImage from "./poster-image.jpg";
+import PosterImage from "./posterImage.jpg";
 import ItcLogo from "./Itc-logo.jpg";
 import TitanLogo from "./Titan-logo.jpg";
 import LakmeLogo from "./lakme-logo.jpg";
