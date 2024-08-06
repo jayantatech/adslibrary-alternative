@@ -1,0 +1,33 @@
+/* animations.module.css */
+
+@keyframes move-up {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-56%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes move-down {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-56%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animateMoveUp {
+  animation: move-up 10s ease-in-out infinite;
+}
+
+.animateMoveDown {
+  animation: move-down 10s ease-in-out infinite;
+}

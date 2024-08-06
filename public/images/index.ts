@@ -12,6 +12,10 @@ import Logo from "./logoipsum-297.svg";
 //home page images
 
 import HeroDashboardIMage from "./home/home_top_image.webp";
+import HeroDashboardBackgroundOne from "./home/bestads_1.webp";
+import HeroDashboardBackgroundTwo from "./home/bestads_2.webp";
+import HeroBackgroundSideImageOne from "./home/discoverads_1.webp";
+import HeroBackgroundSideImageTwo from "./home/discoverads_2.webp";
 
 export {
   FacebookLogo,
@@ -25,4 +29,8 @@ export {
   BoatLogo,
   Logo,
   HeroDashboardIMage,
+  HeroDashboardBackgroundOne,
+  HeroDashboardBackgroundTwo,
+  HeroBackgroundSideImageOne,
+  HeroBackgroundSideImageTwo,
 };
