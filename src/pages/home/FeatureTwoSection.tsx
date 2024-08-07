@@ -6,36 +6,26 @@ import { MdArrowOutward } from "react-icons/md";
 import { FaFacebookSquare, FaInstagram, FaTiktok } from "react-icons/fa";
 import { AiFillTikTok } from "react-icons/ai";
 
-const FeatureOneSection = () => {
+const FeatureTwoSection = () => {
   return (
-    <div className="w-full h-auto bg-lightBlue py-14">
+    <div className="w-full h-auto bg-mainBlue py-14">
       <ContentWrapper>
-        <div className="flex max-lg:flex-col-reverse gap-4 max-md:gap-14 min-h-[640px] bg-cyand-300 py-4">
+        <div className="flex flex-row-reverse max-lg:flex-col-reverse gap-4 max-md:gap-14 min-h-[640px] bg-cyand-300 py-4">
           <div className="w-1/2 h-full bg-slated-400 lg:pr-10 max-lg:w-full lg:pt-14">
-            <span className="text-[20px] font-semibold font-OpenSans">
-              Save
+            <span className="text-[20px] font-semibold font-OpenSans text-white">
+              Library
             </span>
-            <h2 className="lg:text-[48px] text-[36px] max-md:text-[26px]  max-lg:text-[34px]  font-OpenSans font-semibold ">
-              Quickly Save Ads from Multiple Platforms
+            <h2 className="lg:text-[48px] text-[36px] max-md:text-[26px]  max-lg:text-[34px]  font-OpenSans font-semibold text-white">
+              Create Online Ad Library
             </h2>
-            <p className="text-[16px] font-OpenSans py-1">
-              AdsLibrary google chrome extension helps you to save ads or videos
-              from tiktok, instagram and fb ad library in one click.
+            <p className="text-[16px] font-OpenSans py-1 text-white">
+              Ads saved from various ad platforms will be stored in your online
+              ad library for easy viewing and management at any time.
             </p>
-            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-center gap-4 mt-6 max-lg:mt-2 max-md:flex-col">
-              <div className="bg-mainBlue text-white w-2/4 max-md:w-full h-[44px] max-lg:h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-slate-400 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-gray-100 shadow-md">
-                <Image
-                  src={ChromeIcon}
-                  alt="logo"
-                  className="w-[26px] h-[26px]"
-                />
-                <span className="text-[17px] font-OpenSans">
-                  Install Chrome Extension
-                </span>
-              </div>
+            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-start gap-4 mt-6 max-lg:mt-2 max-md:flex-col">
               <div className="bg-white w-2/4 max-md:w-full h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-slate-400 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 max-lg:h-[44px] shadow-md">
                 <span className="text-[17px] font-OpenSans">
-                  Start Free Trial
+                  Go to My Library
                 </span>
                 <MdArrowOutward className="text-[28px]" />
               </div>
@@ -90,4 +80,4 @@ const FeatureOneSection = () => {
   );
 };
 
-export default FeatureOneSection;
+export default FeatureTwoSection;

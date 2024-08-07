@@ -17,6 +17,7 @@ import HeroDashboardBackgroundTwo from "./home/bestads_2.webp";
 import HeroBackgroundSideImageOne from "./home/discoverads_1.webp";
 import HeroBackgroundSideImageTwo from "./home/discoverads_2.webp";
 import QuickSave from "./home/quickly_save_ads.png";
+import HomeDownload from "./home/banner_5.png";
 export {
   FacebookLogo,
   InstagramLogo,
@@ -34,4 +35,5 @@ export {
   HeroBackgroundSideImageOne,
   HeroBackgroundSideImageTwo,
   QuickSave,
+  HomeDownload,
 };
