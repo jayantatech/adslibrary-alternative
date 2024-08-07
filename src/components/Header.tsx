@@ -11,7 +11,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="w-full h-auto py-2 bg-amber-300s shadow-md z-10">
+    <div className="w-full h-auto py-2 shadow-sm z-50 sticky top-0 left-0 max-lg:pb-0 bg-lightBlue">
       <ContentWrapper>
         <div className="relative">
           <div className="w-full h-[66px] max-lg:h-[58px] bgd-cyan-200 flex items-center justify-between">
@@ -29,7 +29,7 @@ const Header = () => {
               </ul>
             </nav>
             <div className="w-[530px] h-full flex gap-6 items-center justify-center max-lg:hidden relative">
-              <div className="bg-white w-[44%] h-[40px] flex items-center justify-start px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500">
+              <div className="bg-white w-[44%] h-[40px] flex items-center justify-start px-2 py-1 gap-2 rounded-[4px] border border-gray-300 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500">
                 <Image
                   src={ChromeIcon}
                   alt="logo"
@@ -60,38 +60,44 @@ const Header = () => {
         </div>
       </ContentWrapper>
       <div
-        className={`w-full max-lg:h-[280px] max-md:h-[312px] h-auto bg-cyan-400 absolute top-[76px] py-2 px-4 max-md:px-2 lg:hidden transition-all duration-200 ${
-          menuOpen ? "translate-y-0" : "-translate-y-[400px]"
+        className={`w-full max-lg:h-full max-md:h-full h-auto bg-lightBlue fixed top-[76px] py-2 px-4 max-md:px-2 lg:hidden transition-all duration-200 z-50 ${
+          menuOpen ? "-translate-y-3" : "-translate-y-[140%]"
         }`}
       >
-        <nav className="w-full bgd-fuchsia-500 h-[170px] flex items-start px-1 justify-start">
-          <ul className="flex gap-2 font-OpenSans text-[16px] flex-col w-full h-auto">
-            <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
-              Product
-              <MdOutlineKeyboardArrowDown className="text-[20px]" />
-            </li>
-            <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
-              Pricing
-            </li>
-            <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
-              Tutorial
-            </li>
-          </ul>
-        </nav>
-        <div className="w-full bg-orange-300 max-lg:h-[68px] max-md:h-[110px] flex flex-row gap-6 max-md:gap-3 items-center justify-center max-md:flex-col">
-          <div className="bg-white w-1/2 max-md:w-full h-[40px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-mainBlue hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500">
-            <Image src={ChromeIcon} alt="logo" className="w-[26px] h-[26px]" />
-            <span className="text-[15px] font-OpenSans">
-              Install Chrome Extension
-            </span>
-          </div>
-          <div className="w-1/2 max-md:w-full bg-slate-400 h-auto bgd-red-500 flex items-center justify-center gap-2">
-            <button className="w-[50%] h-[40px] bgd-blue-500 text-[15px] rounded-[4px] font-semibold font-OpenSans hover:text-blue-500 border hover:scale-[.98] transition-all duration-200 border-mainBlue">
-              Login
-            </button>
-            <button className="w-[50%] h-[40px] bg-mainBlue text-white rounded-[4px] text-[15px] font-semibold font-OpenSans hover:scale-[.98] transition-all duration-200 hover:bg-blue-500">
-              Sign Up
-            </button>
+        <div className="w-full max-lg:h-[280px] max-md:h-[312px] h-auto">
+          <nav className="w-full bgd-fuchsia-500 h-[170px] flex items-start px-1 justify-start">
+            <ul className="flex gap-2 font-OpenSans text-[16px] flex-col w-full h-auto">
+              <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
+                Product
+                <MdOutlineKeyboardArrowDown className="text-[20px]" />
+              </li>
+              <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
+                Pricing
+              </li>
+              <li className="flex items-center justify-start cursor-pointer gap-1 w-full h-auto py-2 pl-3 border-b">
+                Tutorial
+              </li>
+            </ul>
+          </nav>
+          <div className="w-full max-lg:h-[68px] max-md:h-[110px] flex flex-row gap-6 max-md:gap-3 items-center justify-center max-md:flex-col">
+            <div className="bg-white w-1/2 max-md:w-full h-[40px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-gray-300 shadow hover:border-mainBlue hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500">
+              <Image
+                src={ChromeIcon}
+                alt="logo"
+                className="w-[26px] h-[26px]"
+              />
+              <span className="text-[15px] font-OpenSans">
+                Install Chrome Extension
+              </span>
+            </div>
+            <div className="w-1/2 max-md:w-full h-auto bgd-red-500 flex items-center justify-center gap-2">
+              <button className="w-[50%] h-[40px] bgd-blue-500 text-[15px] rounded-[4px] font-semibold font-OpenSans hover:text-blue-500 border hover:scale-[.98] transition-all duration-200 border-mainBlue shadow">
+                Login
+              </button>
+              <button className="w-[50%] h-[40px] bg-mainBlue text-white rounded-[4px] text-[15px] font-semibold font-OpenSans hover:scale-[.98] transition-all duration-200 hover:bg-blue-500 shadow">
+                Sign Up
+              </button>
+            </div>
           </div>
         </div>
       </div>
