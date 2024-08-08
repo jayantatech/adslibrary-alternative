@@ -16,21 +16,21 @@ import {
 const testimonials = [
   {
     image: PersonOne,
-    text: "I love using Pulse! The results have been amazing and it's so easy to use.The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
+    text: "I love using Pulse! The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
     name: "Sarah J.",
     rating: 5,
     design: "design1",
   },
   {
     image: PersonOne,
-    text: "I love using Pulse! The results have been amazing and it's so easy to use.The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
+    text: "I love using Pulse! The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
     name: "John D.",
     rating: 5,
     design: "design2",
   },
   {
     image: PersonOne,
-    text: " to use.The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
+    text: "The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use. The results have been amazing and it's so easy to use.",
     name: "Emily R.",
     rating: 5,
     design: "design3",
@@ -89,7 +89,7 @@ const TestimonialsSection = () => {
                         </div>
                       </div>
                       <p className="text-[20px] max-lg:text-[20px] font-OpenSans italic pb-1 max-md:text-[18px] min-h-[150px] max-lg:min-h-[146px] ">
-                        "{testimonial.text}"
+                        &quot;{testimonial.text}&quot;
                       </p>
                     </div>
                   </div>
