@@ -11,8 +11,8 @@ const FeatureTwoSection = () => {
     <div className="w-full h-auto bg-mainBlue py-14">
       <ContentWrapper>
         <div className="flex flex-row-reverse max-lg:flex-col-reverse gap-4 max-md:gap-14 min-h-[640px] bg-cyand-300 py-4">
-          <div className="w-1/2 h-full bg-slated-400 lg:pr-10 max-lg:w-full lg:pt-14">
-            <span className="text-[20px] font-semibold font-OpenSans text-white">
+          <div className="w-1/2 h-full bg-slated-400 lg:pr-10 max-lg:w-full lg:pt-14 max-lg:text-center max-md:text-start">
+            <span className="text-[20px] font-semibold font-OpenSans text-white max-lg:text-center">
               Library
             </span>
             <h2 className="lg:text-[48px] text-[36px] max-md:text-[26px]  max-lg:text-[34px]  font-OpenSans font-semibold text-white">
@@ -22,8 +22,8 @@ const FeatureTwoSection = () => {
               Ads saved from various ad platforms will be stored in your online
               ad library for easy viewing and management at any time.
             </p>
-            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-start gap-4 mt-6 max-lg:mt-2 max-md:flex-col">
-              <div className="bg-white w-2/4 max-md:w-full h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-slate-400 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 max-lg:h-[44px] shadow-md">
+            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-start gap-4 mt-6 max-lg:mt-2 max-md:flex-col max-lg:justify-center">
+              <div className="bg-white w-2/4 max-md:w-full h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-slate-400 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 max-lg:h-[44px] shadow-md ">
                 <span className="text-[17px] font-OpenSans">
                   Go to My Library
                 </span>

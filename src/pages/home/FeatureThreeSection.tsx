@@ -10,7 +10,7 @@ const FeatureThreeSection = () => {
     <div className="w-full h-auto bg-lightBlue py-14">
       <ContentWrapper>
         <div className="flex  max-lg:flex-col-reverse gap-4 max-md:gap-14 min-h-[640px] bg-cyand-300 py-4">
-          <div className="w-1/2 h-full bg-slated-400 lg:pr-10 max-lg:w-full lg:pt-14">
+          <div className="w-1/2 h-full bg-slated-400 lg:pr-10 max-lg:w-full lg:pt-14 max-lg:text-center max-md:text-start">
             <span className="text-[20px] font-semibold font-OpenSans text-black">
               Download
             </span>
@@ -22,7 +22,7 @@ const FeatureThreeSection = () => {
               download ad videos, images and other data from detail pages of the
               saved ads.
             </p>
-            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-start gap-4 mt-6 max-lg:mt-2 max-md:flex-col">
+            <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-start gap-4 mt-6 max-lg:mt-2 max-md:flex-col max-lg:justify-center">
               <div className="bg-white w-2/4 max-md:w-full h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-slate-400 hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 max-lg:h-[44px] shadow-md">
                 <span className="text-[17px] font-OpenSans">
                   Go to My Library
