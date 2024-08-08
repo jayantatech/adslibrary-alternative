@@ -5,6 +5,7 @@ import FeatureOneSection from "@/pages/home/FeatureOneSection";
 import FeatureThreeSection from "@/pages/home/FeatureThreeSection";
 import FeatureTwoSection from "@/pages/home/FeatureTwoSection";
 import HeroSection from "@/pages/home/HeroSection";
+import MoreFeaturesSection from "@/pages/home/MoreFeaturesSection";
 import React from "react";
 
 const Home = () => {
@@ -16,7 +17,8 @@ const Home = () => {
       <FeatureOneSection />
       <FeatureTwoSection />
       <FeatureThreeSection />
-      <FeatureFourSection />
+      {/* <FeatureFourSection /> */}
+      <MoreFeaturesSection />
       <div className="w-full h-[980px]"></div>
     </div>
   );
