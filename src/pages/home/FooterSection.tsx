@@ -136,13 +136,13 @@ const FooterSection = () => {
               </div>
               <div className="flex items-start justify-center flex-col gap-3">
                 <a className="text-[15px] font-openSans text-[#fff] font-semibold hover:text-lightBlue cursor-pointer hover:scale-[.98] transition-all duration-150 flex items-center justify-start">
-                  Chrome Extension
+                  Post one{" "}
                 </a>
                 <a className="text-[15px] font-openSans text-[#fff] font-semibold hover:text-lightBlue cursor-pointer hover:scale-[.98] transition-all duration-150 flex items-center justify-start">
-                  Library{" "}
+                  Post two{" "}
                 </a>
                 <a className="text-[15px] font-openSans text-[#fff] font-semibold hover:text-lightBlue cursor-pointer hover:scale-[.98] transition-all duration-150 flex items-center justify-start">
-                  Discovery{" "}
+                  Post three{" "}
                 </a>
               </div>
             </div>
