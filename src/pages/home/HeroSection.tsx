@@ -48,7 +48,7 @@ const HeroSection = () => {
                 instagram. Share creative ad ideas with your team or clients.
               </p>
               <div className="flex w-full h-[80px] max-lg:h-[66px] max-md:h-auto py-2  items-center justify-center gap-4 mt-6 max-lg:mt-2 max-md:flex-col">
-                <div className="bg-mainBlue text-white w-[288px] h-[54px] max-lg:h-[44px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-gray-100">
+                <div className="bg-mainBlue text-white w-[288px] h-[44px] max-lg:h-[40px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-gray-100">
                   <Image
                     src={ChromeIcon}
                     alt="logo"
@@ -58,11 +58,11 @@ const HeroSection = () => {
                     Install Chrome Extension
                   </span>
                 </div>
-                <div className="bg-white w-[178px] h-[54px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 max-lg:h-[44px]">
+                <div className="bg-white w-[178px] h-[44px] max-lg:h-[40px] flex items-center justify-center px-2 py-1 gap-2 rounded-[4px] border border-black hover:border-blue-500 hover:scale-[.98] transition-all duration-200 cursor-pointer hover:text-blue-500 ">
                   <span className="text-[17px] font-OpenSans">
                     Start Free Trial
                   </span>
-                  <MdArrowOutward className="text-[28px]" />
+                  <MdArrowOutward className="text-[26px]" />
                 </div>
               </div>
             </div>
