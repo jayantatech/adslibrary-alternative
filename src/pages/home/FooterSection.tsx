@@ -148,13 +148,6 @@ const FooterSection = () => {
             </div>
           </div>
         </ContentWrapper>
-        <div className="absolute inset-0 z-0">
-          <Image
-            src={""}
-            alt="background_image"
-            className="object-cover w-full h-full opacity-[0.27] scale-125 -rotate-180"
-          />
-        </div>
       </div>
     </footer>
   );
