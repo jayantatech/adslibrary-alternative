@@ -4,6 +4,7 @@ import FeatureFourSection from "@/pages/home/FeatureFourSection";
 import FeatureOneSection from "@/pages/home/FeatureOneSection";
 import FeatureThreeSection from "@/pages/home/FeatureThreeSection";
 import FeatureTwoSection from "@/pages/home/FeatureTwoSection";
+import FooterSection from "@/pages/home/FooterSection";
 import HeroSection from "@/pages/home/HeroSection";
 import MoreFeaturesSection from "@/pages/home/MoreFeaturesSection";
 import TestimonialsSection from "@/pages/home/TestimonialsSection";
@@ -21,7 +22,7 @@ const Home = () => {
       {/* <FeatureFourSection /> */}
       <MoreFeaturesSection />
       <TestimonialsSection />
-      <div className="w-full h-[980px]"></div>
+      <FooterSection />
     </div>
   );
 };
