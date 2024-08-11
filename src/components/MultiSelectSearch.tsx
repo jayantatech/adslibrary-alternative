@@ -21,6 +21,10 @@ function MultiSelectSearch({
     onSelect(selectedValues);
   };
 
+  function clearSelectedData() {
+    setSelectedFrameworks([]);
+  }
+
   return (
     <MultiSelect
       options={options}
@@ -29,7 +33,7 @@ function MultiSelectSearch({
       placeholder={placeholder}
       variant="secondary"
       maxCount={1}
-      className="w-auto max-md:min-w-[330px] max-w-[420px] max-lg:max-w-[320px] min-w-[240px] max-lg:min-w-[320px] bg-white hover:bg-white border border-gray-400"
+      className="w-auto max-md:max-w-full max-w-[420px] max-lg:max-w-[320px] min-w-[240px] max-lg:min-w-[320px] bg-white hover:bg-white border border-gray-400"
     />
   );
 }

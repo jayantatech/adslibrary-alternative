@@ -10,6 +10,7 @@ import {
   subMonths,
   startOfYear,
   endOfMonth,
+  subYears,
 } from "date-fns";
 import { DateRange } from "react-day-picker";
 
@@ -21,7 +22,6 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
 const presets = {
   "Last 7 Days": () => ({
     from: subDays(new Date(), 7),
@@ -31,21 +31,21 @@ const presets = {
     from: subDays(new Date(), 14),
     to: new Date(),
   }),
-  " Last 1 Month": () => ({
+  "Last 1 Month": () => ({
     from: startOfMonth(subMonths(new Date(), 1)),
     to: endOfMonth(subMonths(new Date(), 1)),
   }),
-  " Last 3 Months": () => ({
+  "Last 3 Months": () => ({
     from: startOfMonth(subMonths(new Date(), 3)),
-    to: endOfMonth(subMonths(new Date(), 3)),
+    to: endOfMonth(subMonths(new Date(), 1)),
   }),
-  " Last 6 Months": () => ({
+  "Last 6 Months": () => ({
     from: startOfMonth(subMonths(new Date(), 6)),
-    to: endOfMonth(subMonths(new Date(), 6)),
+    to: endOfMonth(subMonths(new Date(), 1)),
   }),
-  " Last 1 Year": () => ({
-    from: startOfYear(subMonths(new Date(), 12)),
-    to: new Date(),
+  "Last 1 Year": () => ({
+    from: subYears(new Date(), 1), // Go back exactly 1 year from today
+    to: new Date(), // Today's date
   }),
 };
 
@@ -72,7 +72,7 @@ export function CustomDatePicker({
             id="date"
             variant={"outline"}
             className={cn(
-              "w-[300px] max-lg:w-[410px] max-md:min-w-[330px] max-md:w-[284px] justify-start text-left font-normal bg-white h-[39px] shadow-md hover:bg-white border border-gray-400",
+              "lg:min-w-[300px] max-lg:w-[410px] max-md:w-full max-md:min-w-[316px] w-auto justify-start text-left font-normal bg-white h-[39px] shadow-md hover:bg-white border border-gray-400",
               !date && "text-muted-foreground"
             )}
           >

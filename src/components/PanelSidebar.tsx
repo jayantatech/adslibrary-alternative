@@ -16,11 +16,11 @@ const PanelSidebar = () => {
         <div className="pt-10">
           <span className="text-[16px] font-OpenSans text-gray-400">Main</span>
           <div className="flex flex-col gap-4 pt-2">
-            <div className="flex items-center justify-start gap-3 py-2 bg-mainBlue px-2 rounded-md cursor-pointer">
+            <div className="flex items-center justify-start gap-3 py-2 hover:bg-mainBlue px-2 rounded-md cursor-pointer">
               <FaHome className="text-[18px]" />
               <span className="text-[16px]">Libary</span>
             </div>
-            <div className="flex items-center justify-start gap-3 py-2  hover:bg-mainBlue px-2 rounded-md cursor-pointer">
+            <div className="flex items-center justify-start gap-3 py-2 bg-mainBlue  hover:bg-mainBlue px-2 rounded-md cursor-pointer">
               <TbPhotoSearch className="text-[18px]" />
               <span className="text-[16px]">Explore</span>
             </div>

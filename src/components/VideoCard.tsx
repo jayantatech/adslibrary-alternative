@@ -5,9 +5,8 @@ import { BsClock } from "react-icons/bs";
 import { FaEye, FaPlay } from "react-icons/fa";
 import { HiOutlineStatusOnline } from "react-icons/hi";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { FacebookLogo, InstagramLogo } from "../../public/images";
+import { FacebookLogo, FirstVideo, InstagramLogo } from "../../public/images";
 import { VideoPostTypes } from "../../public/contents";
-import { AdOne } from "../../public/videos";
 
 const VideoCard = ({
   brandLogo,
@@ -58,7 +57,7 @@ const VideoCard = ({
   }, [isVideoPlaying]);
 
   return (
-    <div className="w-[368px] max-lg:w-[330px] h-auto bg-white rounded-md p-3 shadow-lg">
+    <div className="w-[368px] max-lg:w-[340px] h-auto bg-white rounded-md p-3 shadow-lg">
       <div className="w-full h-[54px] max-lg:h-[52px] flex items-center justify-between">
         <div className="w-auto h-full flex items-center justify-start gap-1">
           <div className="w-[48px] max-lg:w-[46px] h-[48px] max-lg:h-[46px] rounded-md">
@@ -117,7 +116,7 @@ const VideoCard = ({
           </div>
         </div>
       </div>
-      <div className="w-full h-[506px] max-lg:h-[484px] my-1.5 rounded-md overflow-hidden relative">
+      <div className="w-full h-[488px] max-lg:h-[484px] my-1.5 rounded-md overflow-hidden relative">
         <div
           className={`w-[80px] h-[80px] absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 rounded-full flex items-center justify-center z-10 cursor-pointer ${
             !isVideoPlaying ? "block" : "hidden"
@@ -129,7 +128,7 @@ const VideoCard = ({
         </div>
         <video
           ref={videoRef}
-          src={AdOne}
+          src={postVideo}
           controls={isVideoPlaying}
           poster={poster}
           className="w-full h-full object-cover z-0"

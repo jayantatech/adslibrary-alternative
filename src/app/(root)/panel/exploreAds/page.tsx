@@ -1,11 +1,8 @@
 import FiltersBar from "@/components/FiltersBar";
-import MultiSelectSearch from "@/components/MultiSelectSearch";
-import SearchSection from "@/components/SearchSection";
 import React from "react";
 import { RiAddBoxFill } from "react-icons/ri";
-import { ImagePosts, VideoPosts } from "../../../../../public/contents";
-import VideoCard from "@/components/VideoCard";
-import ImageCard from "@/components/ImageCard";
+import { MixedPosts } from "../../../../../public/contents";
+import CardsComponent from "@/components/CardsComponent";
 
 const page = () => {
   return (
@@ -20,7 +17,7 @@ const page = () => {
           </div>
         </div>
         <div className=" w-auto max-md:w-full h-full flex items-center justify-center">
-          <button className="w-auto h-[40px] px-3 py-2 flex items-center justify-center text-mainBlue hover:bg-mainBlue border-2 border-mainBlue font-medium gap-1 rounded-md hover:text-white hover:scale-[.95] transition-all duration-150 max-md:w-full">
+          <button className="w-auto h-[40px] px-2 py-2 flex items-center justify-center text-mainBlue hover:bg-mainBlue border-2 border-mainBlue font-medium gap-1 rounded-md hover:text-white hover:scale-[.95] transition-all duration-150 max-md:w-full">
             <RiAddBoxFill className="text-[22px] " />
             <span className="text-[18px]">Add New</span>
           </button>
@@ -29,33 +26,10 @@ const page = () => {
       <div className="w-full py-4 ">
         <FiltersBar />
       </div>
-      <div className="w-full h-auto bg-redd-300 min-h-[450px] py-4">
-        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center">
-          {ImagePosts.map((post) => (
-            <ImageCard
-              key={post.brandName}
-              brandLogo={post.brandLogo}
-              brandName={post.brandName}
-              lastSaveDate={post.lastSaveDate}
-              activeStatus={post.activeStatus}
-              postImage={post.postImage}
-              postDescription={post.postDescription}
-            />
-          ))}
-        </div>
-        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center mt-14">
-          {VideoPosts.map((post) => (
-            <VideoCard
-              key={post.brandName}
-              brandLogo={post.brandLogo}
-              brandName={post.brandName}
-              lastSaveDate={post.lastSaveDate}
-              activeStatus={post.activeStatus}
-              postVideo={post.postVideo}
-              postDescription={post.postDescription}
-            />
-          ))}
-        </div>
+      <div className=" columns-2 2xl:columns-4 max-xl:col-span-3  max-lg:columns-2 max-md:columns-1 py-3 gap-3  lg:gap-6 max-lg:gap-4 w-full  h-auto overflow-hidden ">
+        {MixedPosts.map((card, index) => (
+          <CardsComponent key={index} cardData={card} />
+        ))}
       </div>
     </div>
   );

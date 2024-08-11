@@ -19,6 +19,9 @@ import HeroBackgroundSideImageTwo from "./home/discoverads_2.webp";
 import QuickSave from "./home/quickly_save_ads.png";
 import HomeDownload from "./home/banner_5.png";
 import PersonOne from "./home/personOne.jpg";
+import FirstVideo from "./ad-1.mp4";
+import NextVideo from "./ad-2.mp4";
+import ThirdVideo from "./ad-3.mp4";
 export {
   FacebookLogo,
   InstagramLogo,
@@ -38,4 +41,7 @@ export {
   QuickSave,
   HomeDownload,
   PersonOne,
+  FirstVideo,
+  NextVideo,
+  ThirdVideo,
 };
