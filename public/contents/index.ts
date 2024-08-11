@@ -30,6 +30,15 @@ const ImagePosts: ImagePostTypes[] = [
       "Discover our new makeup collection with vibrant colors and long-lasting wear.",
   },
   {
+    brandLogo: LakmeLogo,
+    brandName: "Lakme",
+    lastSaveDate: "28 Jul 2024",
+    activeStatus: "Active Status",
+    postImage: PosterImage,
+    postDescription:
+      "Discover our new makeup collection with vibrant colors and long-lasting wear.",
+  },
+  {
     brandLogo: TitanLogo,
     brandName: "Titan",
     lastSaveDate: "25 Jul 2024",
@@ -59,6 +68,15 @@ export type VideoPostTypes = {
 };
 
 const VideoPosts: VideoPostTypes[] = [
+  {
+    brandLogo: LakmeLogo,
+    brandName: "Lakme",
+    lastSaveDate: "28 Jul 2024",
+    activeStatus: "Active Status",
+    postVideo: AdOne,
+    postDescription:
+      "Discover our new makeup collection with vibrant colors and long-lasting wear.",
+  },
   {
     brandLogo: LakmeLogo,
     brandName: "Lakme",

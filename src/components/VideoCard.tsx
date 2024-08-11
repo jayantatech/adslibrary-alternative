@@ -58,7 +58,7 @@ const VideoCard = ({
   }, [isVideoPlaying]);
 
   return (
-    <div className="w-[348px] max-lg:w-[330px] h-auto bg-white rounded-md p-3 shadow-lg">
+    <div className="w-[368px] max-lg:w-[330px] h-auto bg-white rounded-md p-3 shadow-lg">
       <div className="w-full h-[54px] max-lg:h-[52px] flex items-center justify-between">
         <div className="w-auto h-full flex items-center justify-start gap-1">
           <div className="w-[48px] max-lg:w-[46px] h-[48px] max-lg:h-[46px] rounded-md">

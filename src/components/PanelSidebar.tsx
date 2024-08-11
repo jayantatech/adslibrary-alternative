@@ -8,7 +8,7 @@ import { Logo } from "../../public/images";
 
 const PanelSidebar = () => {
   return (
-    <aside className="w-60 h-screen bg-gray-800 text-white flex flex-col justify-between py-4 px-4 pb-6">
+    <aside className="w-60 h-screen bg-gray-800 text-white flex flex-col justify-between py-4 px-4 pb-6 fixed top-0 left-0">
       <div>
         <div>
           <Image src={Logo} alt="logo" className="h-[34px]" />

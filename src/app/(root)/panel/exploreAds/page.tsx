@@ -1,7 +1,11 @@
+import FiltersBar from "@/components/FiltersBar";
 import MultiSelectSearch from "@/components/MultiSelectSearch";
 import SearchSection from "@/components/SearchSection";
 import React from "react";
 import { RiAddBoxFill } from "react-icons/ri";
+import { ImagePosts, VideoPosts } from "../../../../../public/contents";
+import VideoCard from "@/components/VideoCard";
+import ImageCard from "@/components/ImageCard";
 
 const page = () => {
   return (
@@ -22,9 +26,36 @@ const page = () => {
           </button>
         </div>
       </div>
-      <div className="w-full">
-        <SearchSection />
-        {/* <MultiSelectSearch /> */}
+      <div className="w-full py-4 ">
+        <FiltersBar />
+      </div>
+      <div className="w-full h-auto bg-redd-300 min-h-[450px] py-4">
+        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center">
+          {ImagePosts.map((post) => (
+            <ImageCard
+              key={post.brandName}
+              brandLogo={post.brandLogo}
+              brandName={post.brandName}
+              lastSaveDate={post.lastSaveDate}
+              activeStatus={post.activeStatus}
+              postImage={post.postImage}
+              postDescription={post.postDescription}
+            />
+          ))}
+        </div>
+        <div className="grid grid-cols-4 max-lg:grid-cols-2 max-md:grid-cols-1 gap-y-4 justify-items-center mt-14">
+          {VideoPosts.map((post) => (
+            <VideoCard
+              key={post.brandName}
+              brandLogo={post.brandLogo}
+              brandName={post.brandName}
+              lastSaveDate={post.lastSaveDate}
+              activeStatus={post.activeStatus}
+              postVideo={post.postVideo}
+              postDescription={post.postDescription}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

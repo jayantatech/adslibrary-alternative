@@ -4,7 +4,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className="w-full max-lg:w-full max-lg: h-full bg-red-300 min-h-screen flex">
       {/* Sidebar (only visible on large screens) */}
-      <div className="hidden lg:block l">
+      <div className="hidden lg:block min-w-60">
         <PanelSidebar />
       </div>
       {/* Right section (Header + Content) */}
