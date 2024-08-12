@@ -18,9 +18,7 @@ const ImageCard = ({
   postDescription,
 }: ImagePostTypes) => {
   const [isEyeHover, serIsEyeHover] = useState(false);
-  useEffect(() => {
-    console.log(isEyeHover);
-  }, [isEyeHover]);
+
   return (
     <div className="w-[368px] max-lg:w-[340px] h-fit  bg-white rounded-md p-3 shadow-lg">
       <div className="w-full h-[54px] max-lg:h-[52px] flex items-center justify-between ">
