@@ -45,9 +45,6 @@ const VideoCard = ({
   //   captureFirstFrame();
   // }, [videoRef]);
 
-  useEffect(() => {
-    console.log(isEyeHover);
-  }, [isEyeHover]);
 
   useEffect(() => {
     const video = videoRef.current;
