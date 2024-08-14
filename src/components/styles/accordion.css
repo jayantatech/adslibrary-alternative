@@ -1,0 +1,18 @@
+.custom-accordion-content {
+  transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+}
+
+[data-state="open"] .custom-accordion-content {
+  max-height: 200px; /* Adjust this based on your content height */
+  opacity: 1;
+}
+
+.no-animation {
+  transition: none !important; /* Disable all transitions */
+  max-height: none !important; /* Ensure the content is fully expanded */
+  opacity: 1 !important; /* Ensure the content is fully visible */
+  overflow: visible !important; /* Allow content to be fully shown */
+}
