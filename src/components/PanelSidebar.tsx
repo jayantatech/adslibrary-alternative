@@ -77,7 +77,6 @@ const PanelSidebar = () => {
           </div>
         </div>
         <div className="mt-8">
-          {/* <TreeNode /> */}
           <FolderTreeTwo />
         </div>
       </div>
