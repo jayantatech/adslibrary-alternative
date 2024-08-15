@@ -1,3 +1,4 @@
+import PanelHeader from "@/components/PanelHeader";
 import PanelSidebar from "@/components/PanelSidebar";
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -7,13 +8,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {" "}
         <PanelSidebar />
       </div>
-      <div className="flex-grow flex flex-col">
+      <div className="flex-grow flex flex-col relative">
         {/* Panel Header */}
-        <header className="w-full h-16 bg-blue-500 flex items-center justify-center">
-          <h1 className="text-white text-lg">Header</h1>
-        </header>
+        <PanelHeader />
         {/* Main content */}
-        <section className="flex-grow p-4 bg-lightBlue">{children}</section>
+        <section className="flex-grow lg:p-4 bg-lightBlue">{children}</section>
       </div>
     </div>
   );

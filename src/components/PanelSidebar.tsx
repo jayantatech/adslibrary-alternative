@@ -1,12 +1,62 @@
+"use client";
+import { useEffect, useState } from "react";
 import Image from "next/image";
-import React from "react";
-import { FaHome, FaUser } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { GiTrophy } from "react-icons/gi";
-import { RiArrowDownSFill } from "react-icons/ri";
 import { TbPhotoSearch } from "react-icons/tb";
 import { Logo } from "../../public/images";
+import FolderTree from "./FolderTree";
+import TreeNode from "./FolderTree";
+import FolderTreeTwo from "./FolderTreeTwo";
 
 const PanelSidebar = () => {
+  const calculateTimeLeft = () => {
+    const endDate = new Date("2024-08-20T00:00:00");
+    const now = new Date();
+    const difference = endDate.getTime() - now.getTime();
+
+    let timeLeft = {
+      days: "00",
+      hours: "00",
+      minutes: "00",
+      seconds: "00",
+    };
+
+    if (difference > 0) {
+      timeLeft = {
+        days: String(Math.floor(difference / (1000 * 60 * 60 * 24))).padStart(
+          2,
+          "0"
+        ),
+        hours: String(
+          Math.floor((difference / (1000 * 60 * 60)) % 24)
+        ).padStart(2, "0"),
+        minutes: String(Math.floor((difference / 1000 / 60) % 60)).padStart(
+          2,
+          "0"
+        ),
+        seconds: String(Math.floor((difference / 1000) % 60)).padStart(2, "0"),
+      };
+    }
+
+    return timeLeft;
+  };
+
+  const [timeLeft, setTimeLeft] = useState({
+    days: "00",
+    hours: "00",
+    minutes: "00",
+    seconds: "00",
+  });
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTimeLeft(calculateTimeLeft());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <aside className="w-60 h-screen bg-gray-800 text-white flex flex-col justify-between py-4 px-4 pb-6 fixed top-0 left-0">
       <div>
@@ -20,26 +70,30 @@ const PanelSidebar = () => {
               <FaHome className="text-[18px]" />
               <span className="text-[16px]">Libary</span>
             </div>
-            <div className="flex items-center justify-start gap-3 py-2 bg-mainBlue  hover:bg-mainBlue px-2 rounded-md cursor-pointer">
+            <div className="flex items-center justify-start gap-3 py-2 bg-mainBlue hover:bg-mainBlue px-2 rounded-md cursor-pointer">
               <TbPhotoSearch className="text-[18px]" />
               <span className="text-[16px]">Explore</span>
             </div>
           </div>
         </div>
+        <div className="mt-8">
+          {/* <TreeNode /> */}
+          <FolderTreeTwo />
+        </div>
       </div>
+      {/* side bar folder code */}
+
       <div>
         <div className="w-full min-h-[110px] bg-white rounded-md p-2 flex flex-col gap-2">
-          <div className="w-full h-[50px] bg-tedal-300 flex gap-2 items-center justify-start">
-            <div className="w-[44px] h-[44px] bg-mainBlue rounded-md flex items-center justify-center">
-              <FaUser className="text-[24px]" />
-            </div>
-            <div className="w-auto flex flex-row items-center justify-center gap-2">
-              {" "}
-              <div>
-                <span className="text-[16px] text-gray-600">Jay Biswas</span>
-                <p className="text-[14px] text-gray-600">Free Account</p>
-              </div>
-              <RiArrowDownSFill className="text-[24px] text-black cursor-pointer" />
+          <div className="text-center text-gray-800 bg-">
+            <p className="text-[15px] font-OpenSans font-bold translate-y-1">
+              Free Trial Ends In:
+            </p>
+            <div className="text-[15px] font-semibold font-OpenSans flex items-center justify-center flex-row gap-1 p-1">
+              <span>
+                {timeLeft.days}:{timeLeft.hours}:{timeLeft.minutes}:
+                {timeLeft.seconds}
+              </span>
             </div>
           </div>
           <button className="w-full h-[40px] hover:bg-mainBlue border-2 border-mainBlue text-mainBlue hover:text-white cursor-pointer hover:scale-[.98] transition-all duration-150 rounded-md flex items-center justify-center gap-1">
