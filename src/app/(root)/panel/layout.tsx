@@ -12,7 +12,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         {/* Panel Header */}
         <PanelHeader />
         {/* Main content */}
-        <section className="flex-grow p-4 bg-lightBlue">{children}</section>
+        <section className="flex-grow lg:p-4 bg-lightBlue">{children}</section>
       </div>
     </div>
   );

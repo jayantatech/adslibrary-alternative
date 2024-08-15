@@ -6,7 +6,7 @@ import CardsComponent from "@/components/CardsComponent";
 
 const page = () => {
   return (
-    <div className="w-full h-auto ">
+    <div className="w-full h-auto max-lg:py-3 py-1">
       <div className="w-full min-h-[68px] h-auto max-md:gap-3  bg-white rounded-md flex items-center justify-between px-3 py-2  max-md:flex-col ">
         <div className="flex items-center justify-start gap-4 max-md:w-full h-auto ">
           <div className="text-[18px] font-OpenSans font-semibold px-3 h-[36px] bg-mainBlue text-white rounded-md flex items-center justify-center cursor-pointer max-md:w-3/5">

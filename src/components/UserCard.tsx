@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaUser } from "react-icons/fa";
 import { RiArrowDownSFill } from "react-icons/ri";
 
@@ -17,14 +17,19 @@ import {
   DropdownMenuSubTrigger,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { TbLogout2 } from "react-icons/tb";
 
 const UserCard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
+  useEffect(() => {
+    console.log("the isvalu ", isOpen);
+  }, [isOpen]);
+
   return (
-    <DropdownMenu>
+    <DropdownMenu onOpenChange={() => setIsOpen(!isOpen)}>
       {/* <div> */}
-      <DropdownMenuTrigger onClick={() => setIsOpen(!isOpen)}>
+      <DropdownMenuTrigger>
         <div className="w-[220px] px-2 py-2 h-[50px] border-2 border-slate-200 rounded-md bg-white flex gap-2 items-center justify-start">
           <div className="w-[38px] h-[38px] text-white bg-mainBlue rounded-md flex items-center justify-center">
             <FaUser className="text-[22px]" />
@@ -41,9 +46,9 @@ const UserCard = () => {
               </span>
             </div>
             <RiArrowDownSFill
-              className={`text-[28px] text-black cursor-pointer ${
+              className={`text-[28px] text-black cursor-pointer transform transition-transform duration-300 ease-in-out ${
                 isOpen ? "rotate-180" : "rotate-0"
-              }`}
+              } `}
             />
           </div>
         </div>{" "}
@@ -53,22 +58,10 @@ const UserCard = () => {
         <DropdownMenuLabel>My Account</DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
-          <DropdownMenuItem>
-            Profile
-            <DropdownMenuShortcut>⇧⌘P</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Billing
-            <DropdownMenuShortcut>⌘B</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Settings
-            <DropdownMenuShortcut>⌘S</DropdownMenuShortcut>
-          </DropdownMenuItem>
-          <DropdownMenuItem>
-            Keyboard shortcuts
-            <DropdownMenuShortcut>⌘K</DropdownMenuShortcut>
-          </DropdownMenuItem>
+          <DropdownMenuItem>Profile</DropdownMenuItem>
+          <DropdownMenuItem>Billing</DropdownMenuItem>
+          <DropdownMenuItem>Settings</DropdownMenuItem>
+          <DropdownMenuItem>Keyboard shortcuts</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
         <DropdownMenuGroup>
@@ -84,15 +77,13 @@ const UserCard = () => {
               </DropdownMenuSubContent>
             </DropdownMenuPortal>
           </DropdownMenuSub>
-          <DropdownMenuItem>
-            New Team
-            <DropdownMenuShortcut>⌘+T</DropdownMenuShortcut>
-          </DropdownMenuItem>
+          <DropdownMenuItem>New Team</DropdownMenuItem>
         </DropdownMenuGroup>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          Log out
-          <DropdownMenuShortcut>⇧⌘Q</DropdownMenuShortcut>
+        <DropdownMenuItem className="w-full h-auto flex gap-1">
+          {" "}
+          <TbLogout2 className="text-[18px]" />
+          <span className="text-[16px]">Logout </span>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
