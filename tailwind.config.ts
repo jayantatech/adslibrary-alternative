@@ -18,6 +18,20 @@ const config = {
       },
     },
     extend: {
+      screens: {
+        "xs-laptop": "600px", // Small laptops (12-13 inches)
+        "s-laptop": "768px", // Smaller laptops (14 inches)
+        "m-laptop": "900px", // Medium laptops (15.6 inches)
+        "l-laptop": "1050px", // Large laptops
+        "xl-laptop": "1200px", // Extra-large laptops
+        tablet: "960px", // Larger tablets
+        "l-tablet": "1024px", // Tablets in landscape mode
+        desktop: "1440px", // Desktops and large screens
+        "xl-desktop": "1680px", // Extra-large desktops
+        "ultra-desktop": "1920px", // Ultra-wide screens
+        "4k-desktop": "2560px", // 4K screens
+        "5k-desktop": "3200px", // 5K screens
+      },
       fontFamily: {
         Rotobo: ["Roboto", "sans-serif"],
         Poppins: ["Poppins", "sans-serif"],

@@ -72,8 +72,8 @@ export function CustomDatePicker({
             id="date"
             variant={"outline"}
             className={cn(
-              "lg:min-w-[300px] max-lg:w-[410px] max-md:w-full max-md:min-w-[316px] w-auto justify-start text-left font-normal bg-white h-[39px] shadow-md hover:bg-white border border-gray-400",
-              !date && "text-muted-foreground"
+              "  max-xl-desktop:w-full justify-start text-left font-normal bg-white h-[39px] w-auto max-md:w-full shadow hover:bg-white border border-gray-400 ",
+              !date && "text-muted-foreground "
             )}
           >
             <CalendarIcon className="mr-2 h-4 w-4" />

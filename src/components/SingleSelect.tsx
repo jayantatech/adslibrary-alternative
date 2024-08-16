@@ -33,7 +33,7 @@ const SingleSelect = ({
 
   return (
     <Select onValueChange={handleValueChange}>
-      <SelectTrigger className="w-[180px] border shadow-md shadow-slate-200 h-[39px] outline-none max-md:max-w-full max-lg:w-[320px] border-gray-400">
+      <SelectTrigger className="w-auto max-md:w-full max-xl-desktop:w-1/2  max-ultra-desktop:w-1/3  min-w-[240px] max-lg:min-w-[320px] bg-white hover:bg-white border border-gray-400 shadow ">
         <SelectValue placeholder={placeholder} />
       </SelectTrigger>
       <SelectContent>

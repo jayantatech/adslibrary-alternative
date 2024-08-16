@@ -73,12 +73,12 @@ const FiltersBar = () => {
 
   return (
     <div className="w-full h-auto flex flex-col gap-2 bg-white px-4 py-6 rounded">
-      <div className="flex items-center justify-start min-h-[52px] h-auto  max-md:h-[88px] py-2 w-full gap-2 max-md:flex-col max-md:items-start">
-        <span className="text-[18px] font-OpenSans font-semibold">
+      <div className="flex items-center justify-start min-h-[52px] h-auto  max-md:h-[88px] py-2 w-full gap-2 max-md:flex-col max-md:items-start  max-xl-desktop:w-full">
+        <div className="text-[18px] font-OpenSans font-semibold w-auto">
           {" "}
           Ai Search:
-        </span>
-        <div className="w-[540px] max-lg:w-[580px] max-md:w-full h-full ">
+        </div>
+        <div className="w-[540px] max-lg:w-full  max-xl-desktop:w-1/2  max-md:w-full h-full max-md:px-0 max-lg:pl-2">
           <input
             type="text"
             onChange={(event) => setSearchBoxData(event.target.value)}
@@ -90,15 +90,15 @@ const FiltersBar = () => {
           />
         </div>
       </div>
-      <div className="flex items-center justify-start md:gap-8 max-md:gap-3 max-md:flex-col max-md:items-start">
+      <div className="flex items-start justify-start md:gap-8 max-md:gap-3 max-md:flex-col max-md:items-start">
         <div>
           <span className="text-[18px] font-OpenSans font-semibold">
             {" "}
             Filters:
           </span>
         </div>
-        <div className="flex w-full max-lg:flex-col lg:items-start h-auto xl:flex-col  2xl:flex-row xl:items-start items-center max-lg:items-start justify-start gap-3">
-          <div className=" flex items-center justify-start gap-3 w-auto max-lg:w-full max-md:flex-col max-md:items-start">
+        <div className="flex flex-col xl-desktop:flex-col ultra-desktop:flex-row w-full h-auto gap-3 bg-redd-500 items-start max-md:flex-col max-md:items-start max-xl-laptop:flex-col max-xl:flex-col max-ultra-desktop:flex-col max-xl-desktop:flex-col xl:items-start max-lg:items-start justify-start">
+          <div className=" flex items-start justify-start gap-3 w-auto max-lg:w-full max-md:flex-col max-md:items-start max-lg:flex-row max-ultra-desktop:w-full bg-bldue-200">
             <MultiSelectSearch
               options={categoryOptions}
               onSelect={setSelectedCategories}
@@ -110,7 +110,7 @@ const FiltersBar = () => {
               onSelect={setSelectedFormats}
             />
           </div>
-          <div className=" max-md:min-h-full flex items-center justify-start gap-3 w-auto max-md:flex-col max-md:items-start">
+          <div className="  flex items-start justify-start gap-3 w-auto max-lg:w-full max-md:flex-col max-md:items-start max-lg:flex-row max-ultra-desktop:w-full bg-bldue-400">
             <MultiSelectSearch
               options={platformData}
               placeholder="Platform"
@@ -123,7 +123,7 @@ const FiltersBar = () => {
               onSelect={setSelectedStatus}
             />{" "}
           </div>
-          <div className="w-auto h-auto">
+          <div className="w-auto h-auto max-lg:w-full  max-ultra-desktop:w-1/2">
             <CustomDatePicker onSelect={setSelectedDateRange} />
           </div>
         </div>

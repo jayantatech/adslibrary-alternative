@@ -26,7 +26,7 @@ const page = () => {
       <div className="w-full py-4 ">
         <FiltersBar />
       </div>
-      <div className=" columns-2 2xl:columns-4 max-xl:col-span-3  max-lg:columns-2 max-md:columns-1 py-3 gap-3  lg:gap-6 max-lg:gap-4 w-full  h-auto overflow-hidden ">
+      <div className=" columns-2 xl-desktop:columns-3 ultra-desktop:columns-4 4k-desktop:columns-6 5k-desktop:columns-7 max-lg:columns-2 max-md:columns-1 py-3 gap-3 lg:gap-6 max-lg:gap-4 w-full  h-auto overflow-hidden ">
         {MixedPosts.map((card, index) => (
           <CardsComponent key={index} cardData={card} />
         ))}
