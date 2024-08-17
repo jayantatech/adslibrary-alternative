@@ -6,9 +6,6 @@ import { TitanLogo } from "../../public/images";
 
 const SearchComponent = () => {
   const [inputHover, setInputHover] = useState<boolean>(false);
-  useEffect(() => {
-    console.log("the hover state", inputHover);
-  }, [inputHover]);
   return (
     <div className="w-auto lg:min-w-[280px] lg:w-[494px] relative">
       <div

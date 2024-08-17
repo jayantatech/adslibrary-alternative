@@ -22,10 +22,6 @@ import { TbLogout2 } from "react-icons/tb";
 const UserCard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
-  useEffect(() => {
-    console.log("the isvalu ", isOpen);
-  }, [isOpen]);
-
   return (
     <DropdownMenu onOpenChange={() => setIsOpen(!isOpen)}>
       <DropdownMenuTrigger>

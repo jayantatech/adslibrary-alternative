@@ -16,7 +16,12 @@ const Header = () => {
         <div className="relative">
           <div className="w-full h-[66px] max-lg:h-[58px] bgd-cyan-200 flex items-center justify-between">
             <div className="w-[220px] h-full bgd-cyan-300 flex items-center justify-start">
-              <Image src={Logo} alt="logo" className="w-auto h-[34px]" />
+              <Image
+                src={Logo}
+                alt="logo"
+                className="w-auto h-[34px]"
+                priority
+              />
             </div>
             <nav className="w-[46%] bgd-fuchsia-500 h-full flex items-center justify-start pl-3 max-lg:hidden shrink">
               <ul className="flex gap-4 font-OpenSans text-[16px] font-medium text-gray-600">
