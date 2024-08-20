@@ -87,7 +87,9 @@ const AdsGroupFiltersBar = () => {
       selectedFormats,
       selectedPlatforms,
       selectedStatus,
-      selectedDateRange
+      selectedDateRange,
+      selectedBrand,
+      selectedTag
     );
   };
 
