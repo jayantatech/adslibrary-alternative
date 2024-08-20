@@ -52,9 +52,11 @@ const presets = {
 export function CustomDatePicker({
   className,
   onSelect,
+  topLabel,
 }: {
   className?: React.HTMLAttributes<HTMLDivElement>;
   onSelect: (value: DateRange) => void;
+  topLabel: string;
 }) {
   const [date, setDate] = React.useState<DateRange | undefined>(undefined);
 
@@ -72,18 +74,24 @@ export function CustomDatePicker({
             id="date"
             variant={"outline"}
             className={cn(
-              "  max-xl-desktop:w-full justify-start text-left font-normal bg-white h-[39px] w-auto max-md:w-full shadow hover:bg-white border border-gray-400 ",
+              "  max-xl-desktop:w-full justify-start text-left max-lg:font-semibold font-medium xl:font-semibold bg-white h-[39px] w-auto max-md:w-full shadow hover:bg-white border border-gray-400 ",
               !date && "text-muted-foreground "
             )}
           >
+            {date ? (
+              <span className="flex items-center justify-between w-auto rounded py-0 mx-auto -translate-y-6 -translate-x-2.5 absolute bg-white border text-[12px] px-1 text-muted-foreground ">
+                {`${topLabel}`}
+              </span>
+            ) : null}
+
             <CalendarIcon className="mr-2 h-4 w-4" />
             {date ? (
               date.from ? (
                 date.to ? (
-                  <>
+                  <div className="bg-[#f1f5f9] px-1 rounded font-semibold text-gray-600 max-lg:text-[13px] text-[13px] font-OpenSans">
                     {format(date.from, "LLL dd, y")} -{" "}
                     {format(date.to, "LLL dd, y")}
-                  </>
+                  </div>
                 ) : (
                   format(date.from, "LLL dd, y")
                 )
@@ -97,20 +105,28 @@ export function CustomDatePicker({
             )}
           </Button>
         </PopoverTrigger>
-        <PopoverContent
-          className="w-auto p-0 max-md:translate-y-[278px]"
-          align="center"
-          side="top"
-        >
+        <PopoverContent className="w-auto p-0 " align="center" side="top">
           <div className="flex flex-col gap-2">
-            <Calendar
-              initialFocus
-              mode="range"
-              defaultMonth={date?.from || new Date()} // Default to today's date if no date is selected
-              selected={date}
-              onSelect={setDate}
-              numberOfMonths={2}
-            />
+            <div className="max-md:block hidden">
+              <Calendar
+                initialFocus
+                mode="range"
+                defaultMonth={date?.from || new Date()} // Default to today's date if no date is selected
+                selected={date}
+                onSelect={setDate}
+                numberOfMonths={1}
+              />
+            </div>
+            <div className="md:block hidden">
+              <Calendar
+                initialFocus
+                mode="range"
+                defaultMonth={date?.from || new Date()} // Default to today's date if no date is selected
+                selected={date}
+                onSelect={setDate}
+                numberOfMonths={2}
+              />
+            </div>
             <div className=" max-md:w-full h-auto grid grid-cols-3 max-md:grid-cols-2 max-md:grid-rows-3 grid-rows-2 gap-2 mb-2  px-2 py-2">
               {Object.keys(presets).map((label) => (
                 <Button

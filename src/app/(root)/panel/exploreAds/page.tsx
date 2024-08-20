@@ -1,10 +1,9 @@
 import FiltersBar from "@/components/FiltersBar";
-import React from "react";
 import { RiAddBoxFill } from "react-icons/ri";
 import { MixedPosts } from "../../../../../public/contents";
 import CardsComponent from "@/components/CardsComponent";
 
-const page = () => {
+const ExploreAds = () => {
   return (
     <div className="w-full h-auto max-lg:py-3 py-1">
       <div className="w-full min-h-[68px] h-auto max-md:gap-3  bg-white rounded-md flex items-center justify-between px-3 py-2  max-md:flex-col ">
@@ -17,7 +16,7 @@ const page = () => {
           </div>
         </div>
         <div className=" w-auto max-md:w-full h-full flex items-center justify-center">
-          <button className="w-auto h-[40px] px-2 py-2 flex items-center justify-center text-mainBlue hover:bg-mainBlue border-2 border-mainBlue font-medium gap-1 rounded-md hover:text-white hover:scale-[.95] transition-all duration-150 max-md:w-full">
+          <button className="w-auto h-[38px] min-w-[100px] px-2 py-2 flex items-center justify-center text-mainBlue hover:bg-lightBlue border border-mainBlue font-medium gap-1 rounded hover:scale-[.98] transition-all duration-150 max-md:w-full">
             <RiAddBoxFill className="text-[22px] " />
             <span className="text-[18px]">Add New</span>
           </button>
@@ -35,4 +34,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ExploreAds;

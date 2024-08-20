@@ -33,7 +33,7 @@ function MultiSelectSearch({
       placeholder={placeholder}
       variant="secondary"
       maxCount={1}
-      className="w-auto max-md:w-full  max-xl-desktop:w-1/2 max-ultra-desktop:w-1/3  min-w-[240px]  bg-white hover:bg-white border border-gray-400"
+      className="w-auto max-md:w-full max-lg:font-semibold font-medium xl:font-semibold  max-xl-desktop:w-1/2 max-ultra-desktop:w-1/3  min-w-[240px]  bg-white hover:bg-white border border-gray-400"
     />
   );
 }

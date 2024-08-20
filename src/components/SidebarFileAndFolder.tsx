@@ -4,6 +4,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
 import { AiFillFolderOpen } from "react-icons/ai";
 import { BsFileEarmarkPlay } from "react-icons/bs";
 import { MdMoreHoriz } from "react-icons/md";
@@ -46,7 +47,10 @@ function SidebarFileAndFolder({ folders }: SidebarFileAndFolderProps) {
                 key={fileIndex}
                 className="no-animation flex flex-col gap-1 pb-1.5 pl-5"
               >
-                <div className="w-full h-[28px] hover:bg-slate-200 hover:text-black cursor-pointer pb-1 flex justify-between gap-1 items-center px-1 rounded py-1">
+                <Link
+                  href={file.url}
+                  className="w-full h-[28px] hover:bg-slate-200 hover:text-black cursor-pointer pb-1 flex justify-between gap-1 items-center px-1 rounded py-1"
+                >
                   <div className="flex gap-1 items-center justify-center">
                     <BsFileEarmarkPlay className="text-[16px]" />
                     <span className="text-[13px]">{file.fileName}</span>
@@ -54,7 +58,7 @@ function SidebarFileAndFolder({ folders }: SidebarFileAndFolderProps) {
                   <div className="w-auto h-auto flex items-center justify-center px-1 hover:border border border-transparent hover:border-blue-500 cursor-pointer rounded">
                     <MdMoreHoriz className="text-[18px]" />
                   </div>
-                </div>
+                </Link>
               </AccordionContent>
             ))}
           </div>

@@ -11,7 +11,7 @@ import FolderTreeTwo from "./FolderTreeTwo";
 
 const PanelSidebar = () => {
   const calculateTimeLeft = () => {
-    const endDate = new Date("2024-08-20T00:00:00");
+    const endDate = new Date("2024-08-29T00:00:00");
     const now = new Date();
     const difference = endDate.getTime() - now.getTime();
 

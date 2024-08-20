@@ -23,22 +23,22 @@ const FolderTreeTwo = () => {
     {
       folderName: "Default Folder",
       files: [
-        { fileName: "FileOne", url: "/" },
-        { fileName: "FileTwo", url: "/" },
+        { fileName: "FileOne", url: "/panel/groupIndex" },
+        { fileName: "FileTwo", url: "/panel/groupIndex" },
       ],
     },
     {
       folderName: "Folder One",
       files: [
-        { fileName: "FileThree", url: "/" },
-        { fileName: "FileFour", url: "/" },
+        { fileName: "FileThree", url: "/panel/groupIndex" },
+        { fileName: "FileFour", url: "/panel/groupIndex" },
       ],
     },
     {
       folderName: "Folder Two",
       files: [
-        { fileName: "FileThree", url: "/" },
-        { fileName: "FileFour", url: "/" },
+        { fileName: "FileThree", url: "/panel/groupIndex" },
+        { fileName: "FileFour", url: "/panel/groupIndex" },
       ],
     },
   ];
