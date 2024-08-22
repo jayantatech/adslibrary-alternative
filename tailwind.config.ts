@@ -26,7 +26,7 @@ const config = {
         "xl-laptop": "1200px", // Extra-large laptops
         tablet: "960px", // Larger tablets
         "l-tablet": "1024px", // Tablets in landscape mode
-        desktop: "1440px", // Desktops and large screens
+        "m-desktop": "1440px", // Desktops and large screens
         "xl-desktop": "1680px", // Extra-large desktops
         "ultra-desktop": "1920px", // Ultra-wide screens
         "4k-desktop": "2560px", // 4K screens
