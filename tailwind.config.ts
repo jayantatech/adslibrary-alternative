@@ -18,6 +18,7 @@ const config = {
       },
     },
     extend: {
+      scrollbar: ["rounded"],
       screens: {
         "xs-laptop": "600px", // Small laptops (12-13 inches)
         "s-laptop": "768px", // Smaller laptops (14 inches)
@@ -97,7 +98,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [require("tailwind-scrollbar"), require("tailwindcss-animate")],
 } satisfies Config;
 
 export default config;

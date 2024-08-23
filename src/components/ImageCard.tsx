@@ -9,6 +9,7 @@ import { MdKeyboardArrowDown } from "react-icons/md";
 import { Skeleton } from "@/components/ui/skeleton";
 import { FacebookLogo, InstagramLogo } from "../../public/images";
 import { ImagePostTypes } from "../../public/contents";
+import CardPostDialogBox from "./CardPostDialogBox";
 
 const ImageCard = ({
   brandLogo,
@@ -74,19 +75,21 @@ const ImageCard = ({
               {brandName}
             </h3>
           </div>
-          <div
-            className={`w-[34px] max-lg:w-[30px] h-[34px] max-lg:h-[30px] bg-transparent rounded-[4px] border-slate-300 hover:border-blue-500 border flex items-center justify-center cursor-pointer transition-all duration-150 ${
-              isEyeHover ? "scale-[.95]" : ""
-            }`}
-            onMouseEnter={() => setIsEyeHover(true)}
-            onMouseLeave={() => setIsEyeHover(false)}
-          >
-            <FaEye
-              className={`text-[18px] max-lg:text-[17px] hover:text-blue-500 transition-all duration-150 ${
-                isEyeHover ? "scale-[.95] text-blue-500" : ""
+          <CardPostDialogBox displayFormat="image" displayData={postImage}>
+            <div
+              className={`w-[34px] max-lg:w-[30px] h-[34px] max-lg:h-[30px] bg-transparent rounded-[4px] border-slate-300 hover:border-blue-500 border flex items-center justify-center cursor-pointer transition-all duration-150 ${
+                isEyeHover ? "scale-[.95]" : ""
               }`}
-            />
-          </div>
+              onMouseEnter={() => setIsEyeHover(true)}
+              onMouseLeave={() => setIsEyeHover(false)}
+            >
+              <FaEye
+                className={`text-[18px] max-lg:text-[17px] hover:text-blue-500 transition-all duration-150 ${
+                  isEyeHover ? "scale-[.95] text-blue-500" : ""
+                }`}
+              />
+            </div>
+          </CardPostDialogBox>
         </div>
         {/* {!isImageLoading ? (
     
