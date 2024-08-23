@@ -238,7 +238,7 @@ function CardPostDialogBox({
                   </div>{" "}
                   <div className="w-full h-auto py-2 mt-4 flex items-start justify-start flex-col">
                     <span className="font-OpenSans text-[18px] font-bold">
-                      Metadata
+                      Source link
                     </span>
                     <a className="cursor-pointer text-mainBlue text-[15px]">
                       https://www.facebook.com/ads/library/?id=1760280567726822
@@ -248,7 +248,7 @@ function CardPostDialogBox({
                       <div className="w-auto h-auto flex-1">
                         <div className="w-auto h-auto">
                           <span className="font-OpenSans text-[18px] font-bold">
-                            Metadata
+                            Landing page
                           </span>{" "}
                           <a className="cursor-pointer text-mainBlue text-[15px]">
                             https://www.facebook.com/ads/library/?id=1760280567726822
