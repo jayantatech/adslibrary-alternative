@@ -5,11 +5,14 @@ import { FaHome } from "react-icons/fa";
 import { GiTrophy } from "react-icons/gi";
 import { TbPhotoSearch } from "react-icons/tb";
 import { Logo } from "../../public/images";
-import FolderTree from "./FolderTree";
-import TreeNode from "./FolderTree";
 import FolderTreeTwo from "./FolderTreeTwo";
+import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 const PanelSidebar = () => {
+  const pathName = usePathname();
+
+  const currentPath = pathName?.split("/")[2];
   const calculateTimeLeft = () => {
     const endDate = new Date("2024-08-29T00:00:00");
     const now = new Date();
@@ -65,15 +68,29 @@ const PanelSidebar = () => {
         </div>
         <div className="pt-10">
           <span className="text-[16px] font-OpenSans text-gray-400">Main</span>
-          <div className="flex flex-col gap-4 pt-2">
-            <div className="flex items-center justify-start gap-3 py-2 hover:bg-mainBlue px-2 rounded-md cursor-pointer">
+          <div className="flex flex-col gap-3 pt-2">
+            <Link
+              href={"/panel/myAds"}
+              className={`flex items-center justify-start gap-3 py-2 hover:bg-mainBlue px-2 rounded-md cursor-pointer ${
+                currentPath === "myAds" || currentPath === "myBrands"
+                  ? "bg-mainBlue"
+                  : ""
+              }`}
+            >
               <FaHome className="text-[18px]" />
-              <span className="text-[16px]">Libary</span>
-            </div>
-            <div className="flex items-center justify-start gap-3 py-2 bg-mainBlue hover:bg-mainBlue px-2 rounded-md cursor-pointer">
+              <span className="text-[16px]">Library</span>
+            </Link>
+            <Link
+              href={"/panel/exploreAds"}
+              className={`flex items-center justify-start gap-3 py-2  hover:bg-mainBlue px-2 rounded-md cursor-pointer ${
+                currentPath === "exploreAds" || currentPath === "exploreBrands"
+                  ? "bg-mainBlue"
+                  : ""
+              }`}
+            >
               <TbPhotoSearch className="text-[18px]" />
               <span className="text-[16px]">Explore</span>
-            </div>
+            </Link>
           </div>
         </div>
         <div className="mt-8">

@@ -1,19 +1,22 @@
 import FiltersBar from "@/components/FiltersBar";
 import { RiAddBoxFill } from "react-icons/ri";
-import { MixedPosts } from "../../../../../public/contents";
+import { MixedPosts } from "../../../../../../public/contents";
 import CardsComponent from "@/components/CardsComponent";
+import TopBarTabs from "@/components/TopBarTabs";
 
 const ExploreAds = () => {
   return (
     <div className="w-full h-auto max-lg:py-3 py-1">
       <div className="w-full min-h-[68px] h-auto max-md:gap-3  bg-white rounded-md flex items-center justify-between px-3 py-2  max-md:flex-col ">
         <div className="flex items-center justify-start gap-4 max-md:w-full h-auto ">
-          <div className="text-[18px] font-OpenSans font-semibold px-3 h-[36px] bg-mainBlue text-white rounded-md flex items-center justify-center cursor-pointer max-md:w-3/5">
-            Community Ads
-          </div>
-          <div className="text-[18px] font-OpenSans font-semibold px-3 h-[36px] bg-lightBlue rounded-md flex items-center justify-center cursor-pointer  max-md:w-1/3">
-            Brands
-          </div>
+          <TopBarTabs
+            firstTabLabel="Community Ads"
+            firstTabLink="/panel/exploreAds"
+            firstTabMatchUrl="exploreAds"
+            secondTabLabel="Brands"
+            secondTabLink="/panel/exploreBrands"
+            secondTabMatchUrl="exploreBrands"
+          />
         </div>
         <div className=" w-auto max-md:w-full h-full flex items-center justify-center">
           <button className="w-auto h-[38px] min-w-[100px] px-2 py-2 flex items-center justify-center text-mainBlue hover:bg-lightBlue border border-mainBlue font-medium gap-1 rounded hover:scale-[.98] transition-all duration-150 max-md:w-full">
