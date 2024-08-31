@@ -8,6 +8,7 @@ import ProductOne from "./lakme-product.jpg";
 import ProductTwo from "./product-boat.jpg";
 import BoatLogo from "./boat-logo.jpg";
 import Logo from "./logoipsum-297.svg";
+import GoogleLogo from "./google_icon.png";
 
 //home page images
 
@@ -44,4 +45,5 @@ export {
   FirstVideo,
   NextVideo,
   ThirdVideo,
+  GoogleLogo,
 };
