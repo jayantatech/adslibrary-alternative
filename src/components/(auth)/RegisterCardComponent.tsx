@@ -18,29 +18,40 @@ import Image from "next/image";
 import { GoogleLogo } from "../../../public/images";
 import Link from "next/link";
 import { registerSchema, RegisterType } from "@/schemas/registerSchema";
-
+import axios from "axios";
 function RegisterCardComponent() {
   const [formData, setFormData] = useState<Partial<RegisterType>>({});
   const [errors, setErrors] = useState<
     Partial<Record<keyof RegisterType, string>>
   >({});
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     try {
       // Validate form data
       registerSchema.parse(formData);
       // If successful, proceed with form submission
+      const response = await axios.post(
+        "http://localhost:4000/api/auth/register",
+        formData
+      );
+
+      console.log("response data is:", response);
       console.log("Form data is valid:", formData);
       setErrors({}); // Clear errors on successful submission
     } catch (e) {
       const zodErrors = e as z.ZodError<RegisterType>;
       const formattedErrors: Partial<Record<keyof RegisterType, string>> = {};
-      zodErrors.errors.forEach((error) => {
-        const field = error.path[0];
-        if (field && typeof field === "string") {
-          formattedErrors[field as keyof RegisterType] = error.message;
-        }
-      });
+
+      if (zodErrors.errors) {
+        // Add this check
+        zodErrors.errors.forEach((error) => {
+          const field = error.path[0];
+          if (field && typeof field === "string") {
+            formattedErrors[field as keyof RegisterType] = error.message;
+          }
+        });
+      }
+
       setErrors(formattedErrors);
     }
   };
