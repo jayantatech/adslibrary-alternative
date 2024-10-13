@@ -1,10 +1,36 @@
+"use client";
 import FiltersBar from "@/components/FiltersBar";
 import { RiAddBoxFill } from "react-icons/ri";
 import { MixedPosts } from "../../../../../../public/contents";
 import CardsComponent from "@/components/CardsComponent";
 import TopBarTabs from "@/components/TopBarTabs";
+import { useEffect } from "react";
+import getJWTToken from "@/lib/getTokenInfo";
+import { useUserData } from "@/lib/hooks/useUserData";
 
 const ExploreAds = () => {
+  // useEffect(() => {
+  //   async function fetchUserData() {
+  //     try {
+  //       const response = await fetch("/api/user-data", { method: "POST" });
+  //       const data = await response.json();
+
+  //       if (!response.ok) {
+  //         throw new Error(data.error || "Failed to fetch user data");
+  //       }
+
+  //       console.log(data.data);
+  //     } catch (err) {
+  //       console.log("error", err);
+  //     }
+  //   }
+
+  //   fetchUserData();
+  // }, []);
+  // console.log("page token", token);
+
+  const { userData, loading, error } = useUserData();
+
   return (
     <div className="w-full h-auto max-lg:py-3 py-1">
       <div className="w-full min-h-[68px] h-auto max-md:gap-3  bg-white rounded-md flex items-center justify-between px-3 py-2  max-md:flex-col ">
